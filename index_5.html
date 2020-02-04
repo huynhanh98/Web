@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<div lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>index5</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="tab-panels">
+        <ul class="tabs">
+            <li rel="panel1">panel1</li>
+            <li rel="panel2">panel2</li>
+            <li rel="panel3">panel3</li>
+            <li rel="panel4">panel4</li>
+        </ul>
+        <div id="panel1" class="panel active">
+            conten1<br/>
+            conten1<br/>
+            conten1<br/>
+            conten1<br/>
+            conten1<br/>
+        </div>
+        <div id="panel2" class="panel">
+            conten2<br/>
+            conten2<br/>
+            conten2<br/>
+            conten2<br/>
+            conten2<br/>
+        </div>
+        <div id="panel3" class="panel">
+            conten3<br/>
+            conten3<br/>
+            conten3<br/>
+            conten3<br/>
+            conten3<br/>
+
+        </div>
+        <div id="panel4" class="panel">
+            conten4<br/>
+            conten4<br/>
+            conten4<br/>
+            conten4<br/>
+            conten4<br/>
+        </div>
+    </div>
+
+
+    <div class="tab-panels">
+        <ul class="tabs">
+            <li rel="panel5">panel5</li>
+            <li rel="panel6">panel6</li>
+            <li rel="panel7">panel7</li>
+            <li rel="panel8">panel8</li>
+        </ul>
+        <div id="panel5" class="panel active">
+            conten5<br/>
+            conten5<br/>
+            conten5<br/>
+            conten5<br/>
+            conten5<br/>
+        </div>
+        <div id="panel6" class="panel">
+            conten6<br/>
+            conten6<br/>
+            conten6<br/>
+            conten6<br/>
+            conten6<br/>
+        </div>
+        <div id="panel7" class="panel">
+            conten7<br/>
+            conten7<br/>
+            conten7<br/>
+            conten7<br/>
+            conten7<br/>
+
+        </div>
+        <div id="panel8" class="panel">
+            conten8<br/>
+            conten8<br/>
+            conten8<br/>
+            conten8<br/>
+            conten8<br/>
+        </div>
+    </div>
+    
+  </body>
+  
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  </script>
+
+  <script>
+      $(function(){
+        $('.tab-panels .tabs li').on('click',function(){
+            var panel= $(this).closest('.tab-panels');
+           panel.find('.tabs li.active').removeClass('active');
+            $(this).addClass('active');
+            var panelToShow= $(this).attr('rel');
+            panel.find('.panel.active').slideUp(300, showNextPanel);
+            function showNextPanel(){
+                $(this).removeClass('active');
+                $('#'+panelToShow).slideDown(300, function(){
+                    $(this).addClass('active');
+                });
+            }
+            });
+        });
+  
+  </script>
+
+

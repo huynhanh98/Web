@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<div lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>index1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+      <div class="container">
+          <div class="jombotron" style="background-color: darkgrey; text-align: center;">
+            <h1>Let's Have Fun</h1>
+            <button id="btn1">btn1</button>
+            <button id="btn2">btn2</button>
+            <button id="btn3">btn3</button>
+            <button id="btn4">btn4</button>
+          </div>
+      
+      <div class="row" style="padding: 30px; text-align: center;">
+          <div class="col-xl-3 ">
+            <div class="card" style="border-color:#0080FF;">
+                <div id="panel1" class="panel panel-primary" >
+                    <div class="panel-heading" style=" background: #0080FF;">
+                        #panel1
+                    </div>
+                    <div class="panel-body1">content</div>
+                </div>
+            </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="card" style="border-color:#0080FF;">
+                <div id="panel2" class="panel panel-primary">
+                    <div class="panel-heading" style="background: #0080FF;">
+                        #panel2
+                    </div>
+                    <div class="panel-body">content</div>
+                </div>
+            </div>
+            </div> 
+          <div class="col-xl-3">
+            <div class="card" style="border-color:#0080FF;">
+                <div id="panel3" class="panel panel-primary">
+                    <div class="panel-heading" style=" background: #0080FF;">
+                        #panel3
+                    </div>
+                    <div class="panel-body">content</div>
+                </div>
+          </div>
+          </div>
+          <div class="col-xl-3">
+            <div class="card" style="border-color:#0080FF;">
+                <div id="panel4" class="panel panel-primary">
+                    <div class="panel-heading" style=" background: #0080FF;">
+                        #panel4
+                    </div>
+                    <div class="panel-body4">content</div>
+                </div>
+          </div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  </script>
+ <script>
+      $(function(){
+        $(".panel-body1").css({color:'red',
+        fontWeight:'bold'
+        })
+      });
+  </script> 
+  <script>
+      $(function(){
+          $("#panel1").hide(300).show(1000).hide(300).show(1000);
+      });
+  </script>
+    <script>
+        $(function(){
+            $("#panel1").hide();
+            $("#panel2").css({opacity:'0.5'});
+        });
+    </script>
+

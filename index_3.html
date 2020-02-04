@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<div lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>index3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+      <div class="container">
+          <div class="jombotron" style="background-color: darkgrey; text-align: center;">
+            <h1>Let's Have Fun</h1>
+            <button class="panel-button" data-panelid="panel1">btn1</button>
+            <button class="panel-button" data-panelid="panel2">btn2</button>
+            <button class="panel-button" data-panelid="panel3">btn3</button>
+            <button class="panel-button" data-panelid="panel4">btn4</button>
+          </div>
+      
+      <div class="row" style="padding: 30px; text-align: center;">
+          <div class="col-xl-3">
+            
+                <div id="panel1" class="card" style="border-color:#0080FF;" >
+                    <div class="panel-heading" style=" background: #0080FF;" >
+                        #panel1
+                    </div>
+                    <div class="panel-body">content</div>
+                </div>
+          
+          </div>
+          <div class="col-xl-3">            
+                <div id="panel2" class="card" style="border-color:#0080FF;">
+                    <div class="panel-heading" style="background: #0080FF;">
+                        #panel2
+                    </div>
+                    <div class="panel-body">content</div>
+                </div>
+          
+            </div> 
+          <div class="col-xl-3">
+            
+                <div id="panel3" class="card" style="border-color:#0080FF;">
+                    <div class="panel-heading" style=" background: #0080FF;">
+                        #panel3
+                    </div>
+                    <div class="panel-body">content</div>
+                </div>
+          
+          </div>
+          <div class="col-xl-3">
+            
+                <div id="panel4" class="card"  style="border-color:#0080FF;" >
+                    <div class="panel-heading" style=" background: #0080FF;">
+                        #panel4
+                    </div>
+                    <div class="panel-body">content</div>
+                </div>
+       
+          </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  </script>
+
+
+
+
+<script>
+    $(function(){
+        
+        var content = "My new Awesome Content";
+        $('.panel-button').on('click', function(){
+            var panelId = $(this).attr('data-panelid');
+            $('#'+panelId).toggle();
+            $('#'+panelId+' .panel-body').html(content);
+        });
+        
+    });
+</script>

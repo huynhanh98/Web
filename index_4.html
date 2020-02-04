@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<div lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <title>index4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap icons -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <style>
+      .special{
+          color: blue;
+      }
+  </style>
+  <body>
+    <ul class="list">
+        <li>one</li>
+        <li class="special">two</li>
+        <li>three</li>
+        <li>
+            <ul class="sublist">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </li>
+    </ul>
+  </body>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  </script>
+
+<script>
+    $(function(){
+        $('li').on('click',function(){
+            $(this).closest('.list').addClass('special');
+
+        });
+    });
+
+</script>
+
+
